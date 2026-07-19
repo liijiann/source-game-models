@@ -1,5 +1,7 @@
 # Source Game Models
 
+**English** | [简体中文](README.zh-CN.md)
+
 `source-game-models` is a Codex skill for sourcing, license-checking, adapting, and integrating free third-party 3D models into Web 3D games.
 
 ![Primitive baseline compared with a sourced and runtime-remixed skeleton](preview.png)
