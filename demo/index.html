@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0b0d10" />
+    <title>Skeleton / A-B Trial</title>
+  </head>
+  <body>
+    <div id="app">
+      <header class="topbar">
+        <a class="brand" href="/" aria-label="Model Trial Lab home">
+          <span class="brand-mark">MT</span>
+          <span>MODEL TRIAL LAB</span>
+        </a>
+        <div class="verified-chip"><span class="status-dot"></span> EXTERNAL ASSET VERIFIED</div>
+      </header>
+
+      <main class="page">
+        <section class="page-heading">
+          <div>
+            <p class="section-kicker">WEB 3D / ASSET STUDY 01</p>
+            <h1>Skeleton / A-B Trial</h1>
+            <p class="lede">One camera. One light rig. A primitive baseline beside a sourced, runtime-remixed character.</p>
+          </div>
+          <div class="asset-identity">
+            <span class="identity-label">SOURCED MODEL</span>
+            <strong>Quaternius Skeleton</strong>
+            <a href="https://poly.pizza/m/DM4QScSmbS" target="_blank" rel="noreferrer">Open original page</a>
+          </div>
+        </section>
+
+        <section class="workspace" aria-label="3D model comparison workspace">
+          <aside class="control-panel">
+            <div class="panel-section">
+              <span class="panel-label">COMPARE</span>
+              <div class="segmented" role="tablist" aria-label="Comparison view">
+                <button class="segment is-active" type="button" data-view="both" role="tab" aria-selected="true">A / B</button>
+                <button class="segment" type="button" data-view="a" role="tab" aria-selected="false">A BASELINE</button>
+                <button class="segment" type="button" data-view="b" role="tab" aria-selected="false">B SOURCED</button>
+              </div>
+            </div>
+
+            <div class="panel-section">
+              <span class="panel-label">ANIMATION CLIP</span>
+              <label class="select-wrap" for="animation-select">
+                <select id="animation-select" disabled>
+                  <option>Loading clips...</option>
+                </select>
+              </label>
+              <div class="transport">
+                <button id="play-toggle" class="icon-button" type="button" aria-label="Pause animation" title="Pause animation">||</button>
+                <button id="reset-camera" class="icon-button" type="button" aria-label="Reset camera" title="Reset camera">RESET</button>
+                <span id="animation-state" class="transport-state">LOADING</span>
+              </div>
+            </div>
+
+            <div class="panel-section panel-notes">
+              <span class="panel-label">RUNTIME REMIX</span>
+              <ul>
+                <li><span class="note-mark"></span> Armor: charcoal / amber</li>
+                <li><span class="note-mark"></span> Skeleton: warm ivory</li>
+                <li><span class="note-mark"></span> Scale: normalized to 3.25m</li>
+                <li><span class="note-mark"></span> Source GLB preserved</li>
+              </ul>
+            </div>
+
+            <div class="panel-footer">
+              <span class="panel-label">LICENSE</span>
+              <strong>CC0 1.0 / Quaternius</strong>
+              <span class="muted">Free to use and modify. Attribution appreciated.</span>
+            </div>
+          </aside>
+
+          <div class="stage-panel">
+            <div class="stage-header">
+              <div class="stage-title"><span class="live-dot"></span> LIVE COMPARISON</div>
+              <div id="load-status" class="stage-status">Loading sourced GLB...</div>
+            </div>
+            <div class="stage-shell">
+              <canvas id="scene-canvas" aria-label="A and B 3D model comparison"></canvas>
+              <div class="pane-tag pane-tag-a"><b>A</b><span>PRIMITIVE BASELINE</span></div>
+              <div class="pane-tag pane-tag-b"><b>B</b><span>SOURCED + REMIXED</span></div>
+              <div class="pane-divider" aria-hidden="true"></div>
+              <div id="stage-error" class="stage-error" hidden></div>
+            </div>
+            <div class="stage-footer">
+              <span>DRAG TO ORBIT</span>
+              <span>SCROLL TO ZOOM</span>
+              <span id="frame-readout">-- FPS / -- DRAW CALLS</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="metrics" aria-label="Audited asset statistics">
+          <div class="metric"><span>FILE</span><strong id="metric-file">--</strong><small>self-contained GLB</small></div>
+          <div class="metric"><span>TRIANGLES</span><strong id="metric-triangles">--</strong><small>measured from file</small></div>
+          <div class="metric"><span>MATERIALS</span><strong id="metric-materials">--</strong><small>runtime clones</small></div>
+          <div class="metric"><span>SKINS / JOINTS</span><strong id="metric-skeleton">--</strong><small>animation rig</small></div>
+          <div class="metric"><span>ANIMATIONS</span><strong id="metric-animations">--</strong><small>real clips only</small></div>
+        </section>
+      </main>
+
+      <footer class="page-footer">
+        <span>MODEL TRIAL LAB / SOURCE-GAME-MODELS</span>
+        <a href="https://poly.pizza/m/DM4QScSmbS" target="_blank" rel="noreferrer">SOURCE PAGE ↗</a>
+        <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="noreferrer">CC0 1.0 ↗</a>
+      </footer>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

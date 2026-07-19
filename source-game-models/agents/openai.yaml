@@ -1,0 +1,7 @@
+interface:
+  display_name: "游戏模型搜索与改造"
+  short_description: "为 Web 3D 游戏搜索、核验、改造并安全接入高质量现成模型"
+  default_prompt: "使用 $source-game-models 为这个 Web 3D 游戏寻找可商用的免费模型，先提供候选并说明改造方案。"
+
+policy:
+  allow_implicit_invocation: true
